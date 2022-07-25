@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  thesis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: thesis
+    container_name: thesis
+    restart: unless-stopped
+    ports:
+      - "8100:4200"
